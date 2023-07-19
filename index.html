@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Poster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="margin-bottom: 100px;">
+    <div> 
+        <div class="backgroundImage"></div>
+        <div class="container">
+            <div class="poster">
+                <img src="HindiMedium.jpg" alt="Movie Poster">
+            </div>
+        </div>
+        <div>
+            <h1 class="MovieTitle">हिंदी</h1>
+        </div>
+        <div>
+            <h1 class="M">M</h1>
+        </div>
+        <div>
+            <h1 class="EDIUM">EDIUM</h1>
+        </div>
+        <div>
+            <q class="Quote fade-in">The parents who will do anything to get their children into the right School</q>
+        </div>
+    </div>
+
+    <section class="quote fade-in">
+        <h2 style="font-size:40px; font-weight:1000;">Story Line</h2>
+        <p class="description fade-in">
+            A couple from Chandni Chowk aspire to give their daughter the best education and thus be a part of and accepted by the elite of Delhi. In a society obsessed with education, Raj and Meeta strive to secure a seat for their daughter in a prestigious school. However, their journey turns into a hilarious roller coaster ride as they try to navigate the complexities of the system.
+        </p>
+        <blockquote class="quote fade-in">
+           <div style="font-weight: 1000;">Comments-</div>
+            <p>
+                "Hilarious and thought-provoking!"
+            </p>
+        </blockquote>
+        <blockquote class="quote fade-in">
+            <p>
+                "A must-watch film that exposes the flaws in the education system."
+            </p>
+        </blockquote>
+    </section>
+
+    <section class="quote fade-in">
+        <h1 style="font-size:40px; font-weight:1000; margin-left: 5%;">Key Details</h2>
+        <div>
+            <h2 class="keyDetails">Genre</h2>
+            <p class="points">- Social comedy-drama, family drama, coming-of-age story</p>
+        </div>
+        <div>
+            <h2 class="keyDetails">Director</h2>
+            <p class="points">- Saket Chaudhary</p>
+        </div>
+        <div>
+            <h2 class="keyDetails">Main Actors</h2>
+            <ul class="points">
+                <li>Irrfan Khan as Raj Batra</li>
+                <li>Saba Qamar as Mita Batra</li>
+                <li>Deepak Dobriyal as Panditji</li>
+                <li>Vishakha Singh as Tina</li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="keyDetails">For More Information Visit Website</h2>
+            <p class="points">- <a href="https://www.imdb.com/title/tt5764096/">Visit IMDB</a></p>
+        </div>
+    </section>
+
+    <!-- JavaScript code for animations -->
+    <script>
+        function isElementInViewport(element) {
+            var rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function animateOnScroll() {
+            var fadeInSection = document.querySelectorAll('.fade-in');
+            fadeInSection.forEach(function(element) {
+                if (isElementInViewport(element)) {
+                    element.classList.add('fade-in-visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
